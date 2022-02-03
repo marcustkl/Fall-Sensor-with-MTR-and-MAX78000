@@ -31,8 +31,10 @@ c:/MaximSDK/Eclipse/Add_2/build/main.o: main.c \
  c:\maximsdk\tools\gnutools\lib\gcc\arm-none-eabi\9.2.1\include\stdint.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\stdint.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\_intsup.h \
- c:\maximsdk\tools\gnutools\arm-none-eabi\include\ctype.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\string.h \
  c:\maximsdk\tools\gnutools\arm-none-eabi\include\xlocale.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\strings.h \
+ c:\maximsdk\tools\gnutools\arm-none-eabi\include\sys\string.h \
  c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
  c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/max78000.h \
  c:/MaximSDK/Libraries/CMSIS/Include/core_cm4.h \
@@ -48,4 +50,14 @@ c:/MaximSDK/Eclipse/Add_2/build/main.o: main.c \
  c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_assert.h \
  c:/MaximSDK/Libraries/Boards/MAX78000/EvKit_V1/Include/board.h \
  c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/gpio.h \
- c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_delay.h
+ c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_delay.h \
+ c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/uart.h \
+ c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/uart_regs.h \
+ c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_sys.h \
+ c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/mxc_device.h \
+ c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/lpgcr_regs.h \
+ c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/gcr_regs.h \
+ c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/dma.h \
+ c:\maximsdk\tools\gnutools\lib\gcc\arm-none-eabi\9.2.1\include\stdbool.h \
+ c:/MaximSDK/Libraries/CMSIS/Device/Maxim/MAX78000/Include/dma_regs.h \
+ c:/MaximSDK/Libraries/PeriphDrivers/Include/MAX78000/nvic_table.h

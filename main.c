@@ -36,46 +36,175 @@
 
 /**
  * @file    main.c
- * @brief   Add_2!
- * @details This example uses the UART to receive input from host machine and add 2 to the data received.
+ * @brief   UART!
+ * @details This example demonstrates the UART Loopback Test.
  */
 
 /***** Includes *****/
 #include <stdio.h>
 #include <stdint.h>
-#include <ctype.h>
+#include <string.h>
 #include "mxc_device.h"
 #include "led.h"
 #include "board.h"
 #include "mxc_delay.h"
+#include "uart.h"
+#include "dma.h"
+#include "nvic_table.h"
 
 /***** Definitions *****/
+// #define DMA
+
+#define UART_BAUD           115200
+#define BUFF_SIZE           1024
+#define DATA_LEN			4
 
 /***** Globals *****/
+volatile int READ_FLAG;
+volatile int DMA_FLAG;
+
+#if defined (BOARD_EVKIT_V1)
+#define READING_UART        0 // default: 1
+#define WRITING_UART        0 // default: 2
+#elif defined (BOARD_FTHR_REVA)
+#define READING_UART        2
+#define WRITING_UART        3
+#else
+#error "This example has been written for the MAX78000 Ev Kit or FTHR board."
+#endif
 
 /***** Functions *****/
+#ifdef DMA
+void DMA_Handler(void)
+{
+    MXC_DMA_Handler();
+    DMA_FLAG = 0;
+}
+#else
+void UART_Handler(void)
+{
+    MXC_UART_AsyncHandler(MXC_UART_GET_UART(READING_UART));
+}
+#endif
 
-// *****************************************************************************
+void readCallback(mxc_uart_req_t* req, int error)
+{
+    READ_FLAG = error;
+}
+/******************************************************************************/
 int main(void)
 {
-    int testInteger;
+    int error, i, fail = 0;
+    uint8_t TxData[DATA_LEN];
+    uint8_t RxData[DATA_LEN];
     
-    printf("This is the addition 2 test!\n");
+//    printf("**************** UART Example ******************\n");
+//    printf("This example receives data from host, adds 2 and sends data back to host.\n");
+//    printf("-->UART Baud \t: %i Hz\n", UART_BAUD);
+//    printf("-->Data Length \t: %i bytes\n", DATA_LEN);
     
-    while (1) {
-        LED_On(LED1);
-        MXC_Delay(500000);
-        LED_Off(LED1);
-        MXC_Delay(500000);
-        printf("Enter an integer: \n");
-        scanf("%d", &testInteger);
-        if (!isdigit(testInteger + '0')) {
-        	printf("Your input is not an integer!\n");
-        }
-        else {
-			printf("adding 2 to testInteger : %d\n", testInteger);
-			testInteger = testInteger + 2;
-			printf("added 2 to testInteger : %d\n", testInteger);
-        }
+    // Initialize the data buffers
+    for (i = 0; i < DATA_LEN; i++) {
+        TxData[i] = "a";
     }
+
+//    memset(RxData, 1, DATA_LEN);
+
+#ifdef DMA
+    MXC_DMA_ReleaseChannel(0);
+    NVIC_SetVector(DMA0_IRQn, DMA_Handler);
+    NVIC_EnableIRQ(DMA0_IRQn);
+#else
+    // Enables reading UART interrupt
+    NVIC_ClearPendingIRQ(MXC_UART_GET_IRQ(READING_UART));
+    NVIC_DisableIRQ(MXC_UART_GET_IRQ(READING_UART));
+    NVIC_SetVector(MXC_UART_GET_IRQ(READING_UART), UART_Handler);
+    NVIC_EnableIRQ(MXC_UART_GET_IRQ(READING_UART));
+#endif
+    
+    // Initialize the UART
+    if((error = MXC_UART_Init(MXC_UART_GET_UART(READING_UART), UART_BAUD, MXC_UART_APB_CLK)) != E_NO_ERROR) {
+        printf("-->Error initializing UART: %d\n", error);
+        printf("-->Example Failed\n");
+        while (1) {}
+    }
+    
+    if((error = MXC_UART_Init(MXC_UART_GET_UART(WRITING_UART), UART_BAUD, MXC_UART_APB_CLK)) != E_NO_ERROR) {
+        printf("-->Error initializing UART: %d\n", error);
+        printf("-->Example Failed\n");
+        while (1) {}
+    }
+
+//    printf("-->UART Initialized\n\n");
+    
+    mxc_uart_req_t read_req;
+    read_req.uart = MXC_UART_GET_UART(READING_UART);
+    read_req.rxData = RxData;
+    read_req.rxLen = DATA_LEN;
+    read_req.txLen = 0;
+    read_req.callback = readCallback;
+    
+    mxc_uart_req_t write_req;
+    write_req.uart = MXC_UART_GET_UART(WRITING_UART);
+    write_req.txData = TxData;
+    write_req.txLen = BUFF_SIZE;
+    write_req.rxLen = 0;
+    write_req.callback = NULL;
+    
+    READ_FLAG = 1;
+    DMA_FLAG = 1;
+
+    MXC_UART_ClearRXFIFO(MXC_UART_GET_UART(READING_UART));
+    
+#ifdef DMA
+    error = MXC_UART_TransactionDMA(&read_req);
+#else
+//    // Set interrupt driven UART Transaction
+//    // Receive data from UART
+//    error = MXC_UART_TransactionAsync(&read_req);
+#endif
+    
+    if (error != E_NO_ERROR) {
+        printf("-->Error starting async read: %d\n", error);
+        printf("-->Example Failed\n");
+        while (1) {}
+    }
+
+    // Perform blocking UART Write Transaction. returns error code if error occurs
+//    error = MXC_UART_Transaction(&write_req);
+    
+    if (error != E_NO_ERROR) {
+        printf("-->Error starting sync write: %d\n", error);
+        printf("-->Example Failed\n");
+        while (1) {}
+    }
+    
+#ifdef DMA
+    
+    while (DMA_FLAG);
+    
+#else
+    
+    while(1){
+        // Set interrupt driven UART Receive
+        // Clears UART receive FIFO after receiving data from host machine
+        error = MXC_UART_TransactionAsync(&read_req);
+    	while (READ_FLAG){
+			LED_On(LED1);
+			MXC_Delay(500000);
+			LED_Off(LED1);
+			MXC_Delay(500000);
+		}
+
+		if (READ_FLAG != E_NO_ERROR) {
+			printf("-->Error with UART_ReadAsync callback; %d\n", READ_FLAG);
+			fail++;
+		}
+
+		// Prints received value, which is stored in memory location: RxData
+		printf("Received data: %d\n", *RxData);
+	    MXC_UART_ClearRXFIFO(MXC_UART_GET_UART(READING_UART));
+    }
+    
+#endif
 }
