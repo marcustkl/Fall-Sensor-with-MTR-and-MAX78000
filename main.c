@@ -101,9 +101,9 @@ static void uart_read_enable_interrupts(void)
 /******************************************************************************/
 int main(void)
 {
-    int error, i, fail = 0;
-    uint8_t TxData[DATA_LEN];
-    uint8_t RxData[DATA_LEN];
+    int error, i = 0;
+    uint32_t TxData[DATA_LEN];
+    uint32_t RxData[DATA_LEN];
     
 //    printf("**************** UART Example ******************\n");
 //    printf("This example receives data from host, adds 2 and sends data back to host.\n");
@@ -214,7 +214,7 @@ int main(void)
 		uint32_t value = *(uint32_t *)RxData + 2;
 
 		// Prints received value, which is stored in memory location: RxData
-		printf("Received data: %d\n", value);
+		printf("Received data: %d. Add 2 to data: %d\n", *RxData, value);
 
         // Clears UART receive FIFO after receiving data from host machine
 	    MXC_UART_ClearRXFIFO(MXC_UART_GET_UART(READING_UART));
