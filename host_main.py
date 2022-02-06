@@ -3,6 +3,7 @@ import sys
 import argparse
 import serial
 import struct
+from time import sleep
 
 # Start - Match these with MAX78000 application
 SERIAL_BAUD = 115200
@@ -14,6 +15,11 @@ SERIAL_TOUT = 5 # Seconds
 def print_result(filename, result):
     """ Print formatted result """
     print("{0}\t{1}".format(filename, result), end = '')
+    
+def input_value(sport):
+        val = int(input("Enter your value: "))
+        sport.write(struct.pack('i', val))
+    
 
 
 def main():
@@ -30,19 +36,20 @@ def main():
 
     # Open device with default description
     sport = serial.Serial(args.device, SERIAL_BAUD, timeout = SERIAL_TOUT)
-    sport.write(struct.pack('i', 232))
+    
+    input_value(sport)
     
     result = []
     while 1:
         char = sport.read(1)
-        # if char == b'':
-        #     result = "Timeout"
-        #     break
+        if char == b'':
+            print("Empty char received")
         result.append(char.decode('utf-8'))
         if char == b'\n':
             result = "".join(result)
             print(result)
             result = []
+        sleep(0.1)
     
 if __name__ == "__main__":
     main()

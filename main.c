@@ -91,6 +91,13 @@ void readCallback(mxc_uart_req_t* req, int error)
 {
     READ_FLAG = error;
 }
+static void uart_read_enable_interrupts(void)
+{
+    NVIC_ClearPendingIRQ(MXC_UART_GET_IRQ(READING_UART));
+    NVIC_DisableIRQ(MXC_UART_GET_IRQ(READING_UART));
+    NVIC_SetVector(MXC_UART_GET_IRQ(READING_UART), UART_Handler);
+    NVIC_EnableIRQ(MXC_UART_GET_IRQ(READING_UART));
+}
 /******************************************************************************/
 int main(void)
 {
@@ -116,10 +123,7 @@ int main(void)
     NVIC_EnableIRQ(DMA0_IRQn);
 #else
     // Enables reading UART interrupt
-    NVIC_ClearPendingIRQ(MXC_UART_GET_IRQ(READING_UART));
-    NVIC_DisableIRQ(MXC_UART_GET_IRQ(READING_UART));
-    NVIC_SetVector(MXC_UART_GET_IRQ(READING_UART), UART_Handler);
-    NVIC_EnableIRQ(MXC_UART_GET_IRQ(READING_UART));
+    uart_read_enable_interrupts();
 #endif
     
     // Initialize the UART
@@ -137,12 +141,12 @@ int main(void)
 
 //    printf("-->UART Initialized\n\n");
     
-    mxc_uart_req_t read_req;
-    read_req.uart = MXC_UART_GET_UART(READING_UART);
-    read_req.rxData = RxData;
-    read_req.rxLen = DATA_LEN;
-    read_req.txLen = 0;
-    read_req.callback = readCallback;
+//    mxc_uart_req_t read_req;
+//    read_req.uart = MXC_UART_GET_UART(READING_UART);
+//    read_req.rxData = RxData;
+//    read_req.rxLen = DATA_LEN;
+//    read_req.txLen = 0;
+//    read_req.callback = readCallback;
     
     mxc_uart_req_t write_req;
     write_req.uart = MXC_UART_GET_UART(WRITING_UART);
@@ -186,8 +190,14 @@ int main(void)
 #else
     
     while(1){
+        mxc_uart_req_t read_req;
+        read_req.uart = MXC_UART_GET_UART(READING_UART);
+        read_req.rxData = (uint8_t*) RxData;
+        read_req.rxLen = DATA_LEN;
+        read_req.txLen = 0;
+        read_req.callback = readCallback;
+
         // Set interrupt driven UART Receive
-        // Clears UART receive FIFO after receiving data from host machine
         error = MXC_UART_TransactionAsync(&read_req);
     	while (READ_FLAG){
 			LED_On(LED1);
@@ -198,12 +208,17 @@ int main(void)
 
 		if (READ_FLAG != E_NO_ERROR) {
 			printf("-->Error with UART_ReadAsync callback; %d\n", READ_FLAG);
-			fail++;
 		}
 
+		// add 2 to received data
+		uint32_t value = *(uint32_t *)RxData + 2;
+
 		// Prints received value, which is stored in memory location: RxData
-		printf("Received data: %d\n", *RxData);
+		printf("Received data: %d\n", value);
+
+        // Clears UART receive FIFO after receiving data from host machine
 	    MXC_UART_ClearRXFIFO(MXC_UART_GET_UART(READING_UART));
+	    uart_read_enable_interrupts();
     }
     
 #endif
