@@ -49,6 +49,7 @@ def main():
             result = "".join(result)
             print(result)
             result = []
+            # sport.reset_input_buffer()
         sleep(0.1)
     
 if __name__ == "__main__":

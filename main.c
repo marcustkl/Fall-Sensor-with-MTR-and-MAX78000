@@ -214,7 +214,9 @@ int main(void)
 		uint32_t value = *(uint32_t *)RxData + 2;
 
 		// Prints received value, which is stored in memory location: RxData
-		printf("Received data: %d. Add 2 to data: %d\n", *RxData, value);
+		printf("\rReceived data: %d. Add 2 to data: %d\n", *RxData, value);
+		// Adding delay of 1 sec updates the value of RxData
+		MXC_Delay(SEC(1));
 
         // Clears UART receive FIFO after receiving data from host machine
 	    MXC_UART_ClearRXFIFO(MXC_UART_GET_UART(READING_UART));

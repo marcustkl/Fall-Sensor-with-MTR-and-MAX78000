@@ -5160,462 +5160,462 @@ LOAD c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+f
  .text.uart_read_enable_interrupts
                 0x10000238       0x24 c:/MaximSDK/Eclipse/Add_2/build/main.o
  .text.startup.main
-                0x1000025c       0xdc c:/MaximSDK/Eclipse/Add_2/build/main.o
+                0x1000025c       0xe4 c:/MaximSDK/Eclipse/Add_2/build/main.o
                 0x1000025c                main
  .text.mxc_assert
-                0x10000338       0x10 c:/MaximSDK/Eclipse/Add_2/build/board.o
-                0x10000338                mxc_assert
+                0x10000340       0x10 c:/MaximSDK/Eclipse/Add_2/build/board.o
+                0x10000340                mxc_assert
  .text.Console_Init
-                0x10000348       0x14 c:/MaximSDK/Eclipse/Add_2/build/board.o
-                0x10000348                Console_Init
+                0x10000350       0x14 c:/MaximSDK/Eclipse/Add_2/build/board.o
+                0x10000350                Console_Init
  .text.Board_Init
-                0x1000035c       0x5c c:/MaximSDK/Eclipse/Add_2/build/board.o
-                0x1000035c                Board_Init
+                0x10000364       0x5c c:/MaximSDK/Eclipse/Add_2/build/board.o
+                0x10000364                Board_Init
  .text.NMI_Handler
-                0x100003b8        0x4 c:/MaximSDK/Eclipse/Add_2/build/board.o
-                0x100003b8                NMI_Handler
- .text._close   0x100003bc        0x6 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
-                0x100003bc                _close
- .text._isatty  0x100003c2        0x6 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
-                0x100003c2                _isatty
- .text._lseek   0x100003c8        0x6 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
-                0x100003c8                _lseek
- .text._fstat   0x100003ce        0x6 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
-                0x100003ce                _fstat
- .text._read    0x100003d4       0x50 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
-                0x100003d4                _read
- .text._write   0x10000424       0x48 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
-                0x10000424                _write
- .text.LED_On   0x1000046c       0x3c c:/MaximSDK/Eclipse/Add_2/build/led.o
-                0x1000046c                LED_On
- .text.LED_Off  0x100004a8       0x3c c:/MaximSDK/Eclipse/Add_2/build/led.o
-                0x100004a8                LED_Off
+                0x100003c0        0x4 c:/MaximSDK/Eclipse/Add_2/build/board.o
+                0x100003c0                NMI_Handler
+ .text._close   0x100003c4        0x6 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
+                0x100003c4                _close
+ .text._isatty  0x100003ca        0x6 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
+                0x100003ca                _isatty
+ .text._lseek   0x100003d0        0x6 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
+                0x100003d0                _lseek
+ .text._fstat   0x100003d6        0x6 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
+                0x100003d6                _fstat
+ .text._read    0x100003dc       0x50 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
+                0x100003dc                _read
+ .text._write   0x1000042c       0x48 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
+                0x1000042c                _write
+ .text.LED_On   0x10000474       0x3c c:/MaximSDK/Eclipse/Add_2/build/led.o
+                0x10000474                LED_On
+ .text.LED_Off  0x100004b0       0x3c c:/MaximSDK/Eclipse/Add_2/build/led.o
+                0x100004b0                LED_Off
  .text.LED_Init
-                0x100004e4       0x40 c:/MaximSDK/Eclipse/Add_2/build/led.o
-                0x100004e4                LED_Init
- .text.PB_Init  0x10000524       0x38 c:/MaximSDK/Eclipse/Add_2/build/pb.o
-                0x10000524                PB_Init
+                0x100004ec       0x40 c:/MaximSDK/Eclipse/Add_2/build/led.o
+                0x100004ec                LED_Init
+ .text.PB_Init  0x1000052c       0x38 c:/MaximSDK/Eclipse/Add_2/build/pb.o
+                0x1000052c                PB_Init
  .text.GPIO0_IRQHandler
-                0x1000055c        0x6 c:/MaximSDK/Eclipse/Add_2/build/pb.o
-                0x1000055c                GPIO0_IRQHandler
+                0x10000564        0x6 c:/MaximSDK/Eclipse/Add_2/build/pb.o
+                0x10000564                GPIO0_IRQHandler
  .text.GPIO1_IRQHandler
-                0x10000562        0x6 c:/MaximSDK/Eclipse/Add_2/build/pb.o
-                0x10000562                GPIO1_IRQHandler
+                0x1000056a        0x6 c:/MaximSDK/Eclipse/Add_2/build/pb.o
+                0x1000056a                GPIO1_IRQHandler
  .text.GPIO2_IRQHandler
-                0x10000568        0x6 c:/MaximSDK/Eclipse/Add_2/build/pb.o
-                0x10000568                GPIO2_IRQHandler
- *fill*         0x1000056e        0x2 
- .text          0x10000570      0x148 c:/MaximSDK/Eclipse/Add_2/build/startup_max78000.o
-                0x10000570                Reset_Handler
-                0x100005ae                HardFault_Handler
-                0x100005b0                MemManage_Handler
-                0x100005b2                BusFault_Handler
-                0x100005b4                UsageFault_Handler
-                0x100005b6                SVC_Handler
-                0x100005b8                DebugMon_Handler
-                0x100005ba                PendSV_Handler
-                0x100005bc                SysTick_Handler
-                0x100005be                Default_Handler
-                0x100005c0                PF_IRQHandler
-                0x100005c2                WDT0_IRQHandler
-                0x100005c4                RSV02_IRQHandler
-                0x100005c6                RTC_IRQHandler
-                0x100005c8                TRNG_IRQHandler
-                0x100005ca                TMR0_IRQHandler
-                0x100005cc                TMR1_IRQHandler
-                0x100005ce                TMR2_IRQHandler
-                0x100005d0                TMR3_IRQHandler
-                0x100005d2                TMR4_IRQHandler
-                0x100005d4                TMR5_IRQHandler
-                0x100005d6                RSV11_IRQHandler
-                0x100005d8                RSV12_IRQHandler
-                0x100005da                I2C0_IRQHandler
-                0x100005dc                UART0_IRQHandler
-                0x100005de                UART1_IRQHandler
-                0x100005e0                SPI1_IRQHandler
-                0x100005e2                RSV17_IRQHandler
-                0x100005e4                RSV18_IRQHandler
-                0x100005e6                RSV19_IRQHandler
-                0x100005e8                ADC_IRQHandler
-                0x100005ea                RSV21_IRQHandler
-                0x100005ec                RSV22_IRQHandler
-                0x100005ee                FLC0_IRQHandler
-                0x100005f6                RSV27_IRQHandler
-                0x100005f8                DMA0_IRQHandler
-                0x100005fa                DMA1_IRQHandler
-                0x100005fc                DMA2_IRQHandler
-                0x100005fe                DMA3_IRQHandler
-                0x10000600                RSV32_IRQHandler
-                0x10000602                RSV33_IRQHandler
-                0x10000604                UART2_IRQHandler
-                0x10000606                RSV35_IRQHandler
-                0x10000608                I2C1_IRQHandler
-                0x1000060a                RSV37_IRQHandler
-                0x1000060c                RSV38_IRQHandler
-                0x1000060e                RSV39_IRQHandler
-                0x10000610                RSV40_IRQHandler
-                0x10000612                RSV41_IRQHandler
-                0x10000614                RSV42_IRQHandler
-                0x10000616                RSV43_IRQHandler
-                0x10000618                RSV44_IRQHandler
-                0x1000061a                RSV45_IRQHandler
-                0x1000061c                RSV46_IRQHandler
-                0x1000061e                RSV47_IRQHandler
-                0x10000620                RSV48_IRQHandler
-                0x10000622                RSV49_IRQHandler
-                0x10000624                RSV50_IRQHandler
-                0x10000626                RSV51_IRQHandler
-                0x10000628                RSV52_IRQHandler
-                0x1000062a                WUT_IRQHandler
-                0x1000062c                GPIOWAKE_IRQHandler
-                0x1000062e                RSV55_IRQHandler
-                0x10000630                SPI0_IRQHandler
-                0x10000632                WDT1_IRQHandler
-                0x10000634                RSV58_IRQHandler
-                0x10000636                PT_IRQHandler
-                0x10000638                RSV60_IRQHandler
-                0x1000063a                RSV61_IRQHandler
-                0x1000063c                I2C2_IRQHandler
-                0x1000063e                RISCV_IRQHandler
-                0x10000640                RSV64_IRQHandler
-                0x10000642                RSV65_IRQHandler
-                0x10000644                RSV66_IRQHandler
-                0x10000646                OWM_IRQHandler
-                0x10000648                RSV68_IRQHandler
-                0x1000064a                RSV69_IRQHandler
-                0x1000064c                RSV70_IRQHandler
-                0x1000064e                RSV71_IRQHandler
-                0x10000650                RSV72_IRQHandler
-                0x10000652                RSV73_IRQHandler
-                0x10000654                RSV74_IRQHandler
-                0x10000656                RSV75_IRQHandler
-                0x10000658                RSV76_IRQHandler
-                0x1000065a                RSV77_IRQHandler
-                0x1000065c                RSV78_IRQHandler
-                0x1000065e                RSV79_IRQHandler
-                0x10000660                RSV80_IRQHandler
-                0x10000662                RSV81_IRQHandler
-                0x10000664                ECC_IRQHandler
-                0x10000666                DVS_IRQHandler
-                0x10000668                SIMO_IRQHandler
-                0x1000066a                RSV85_IRQHandler
-                0x1000066c                RSV86_IRQHandler
-                0x1000066e                RSV87_IRQHandler
-                0x10000670                UART3_IRQHandler
-                0x10000672                RSV89_IRQHandler
-                0x10000674                RSV90_IRQHandler
-                0x10000676                PCIF_IRQHandler
-                0x10000678                RSV92_IRQHandler
-                0x1000067a                RSV93_IRQHandler
-                0x1000067c                RSV94_IRQHandler
-                0x1000067e                RSV95_IRQHandler
-                0x10000680                RSV96_IRQHandler
-                0x10000682                AES_IRQHandler
-                0x10000684                RSV98_IRQHandler
-                0x10000686                I2S_IRQHandler
-                0x10000688                CNN_FIFO_IRQHandler
-                0x1000068a                CNN_IRQHandler
-                0x1000068c                RSV102_IRQHandler
-                0x1000068e                LPCMP_IRQHandler
- .text._sbrk    0x100006b8       0x38 c:/MaximSDK/Eclipse/Add_2/build/heap.o
-                0x100006b8                _sbrk
+                0x10000570        0x6 c:/MaximSDK/Eclipse/Add_2/build/pb.o
+                0x10000570                GPIO2_IRQHandler
+ *fill*         0x10000576        0x2 
+ .text          0x10000578      0x148 c:/MaximSDK/Eclipse/Add_2/build/startup_max78000.o
+                0x10000578                Reset_Handler
+                0x100005b6                HardFault_Handler
+                0x100005b8                MemManage_Handler
+                0x100005ba                BusFault_Handler
+                0x100005bc                UsageFault_Handler
+                0x100005be                SVC_Handler
+                0x100005c0                DebugMon_Handler
+                0x100005c2                PendSV_Handler
+                0x100005c4                SysTick_Handler
+                0x100005c6                Default_Handler
+                0x100005c8                PF_IRQHandler
+                0x100005ca                WDT0_IRQHandler
+                0x100005cc                RSV02_IRQHandler
+                0x100005ce                RTC_IRQHandler
+                0x100005d0                TRNG_IRQHandler
+                0x100005d2                TMR0_IRQHandler
+                0x100005d4                TMR1_IRQHandler
+                0x100005d6                TMR2_IRQHandler
+                0x100005d8                TMR3_IRQHandler
+                0x100005da                TMR4_IRQHandler
+                0x100005dc                TMR5_IRQHandler
+                0x100005de                RSV11_IRQHandler
+                0x100005e0                RSV12_IRQHandler
+                0x100005e2                I2C0_IRQHandler
+                0x100005e4                UART0_IRQHandler
+                0x100005e6                UART1_IRQHandler
+                0x100005e8                SPI1_IRQHandler
+                0x100005ea                RSV17_IRQHandler
+                0x100005ec                RSV18_IRQHandler
+                0x100005ee                RSV19_IRQHandler
+                0x100005f0                ADC_IRQHandler
+                0x100005f2                RSV21_IRQHandler
+                0x100005f4                RSV22_IRQHandler
+                0x100005f6                FLC0_IRQHandler
+                0x100005fe                RSV27_IRQHandler
+                0x10000600                DMA0_IRQHandler
+                0x10000602                DMA1_IRQHandler
+                0x10000604                DMA2_IRQHandler
+                0x10000606                DMA3_IRQHandler
+                0x10000608                RSV32_IRQHandler
+                0x1000060a                RSV33_IRQHandler
+                0x1000060c                UART2_IRQHandler
+                0x1000060e                RSV35_IRQHandler
+                0x10000610                I2C1_IRQHandler
+                0x10000612                RSV37_IRQHandler
+                0x10000614                RSV38_IRQHandler
+                0x10000616                RSV39_IRQHandler
+                0x10000618                RSV40_IRQHandler
+                0x1000061a                RSV41_IRQHandler
+                0x1000061c                RSV42_IRQHandler
+                0x1000061e                RSV43_IRQHandler
+                0x10000620                RSV44_IRQHandler
+                0x10000622                RSV45_IRQHandler
+                0x10000624                RSV46_IRQHandler
+                0x10000626                RSV47_IRQHandler
+                0x10000628                RSV48_IRQHandler
+                0x1000062a                RSV49_IRQHandler
+                0x1000062c                RSV50_IRQHandler
+                0x1000062e                RSV51_IRQHandler
+                0x10000630                RSV52_IRQHandler
+                0x10000632                WUT_IRQHandler
+                0x10000634                GPIOWAKE_IRQHandler
+                0x10000636                RSV55_IRQHandler
+                0x10000638                SPI0_IRQHandler
+                0x1000063a                WDT1_IRQHandler
+                0x1000063c                RSV58_IRQHandler
+                0x1000063e                PT_IRQHandler
+                0x10000640                RSV60_IRQHandler
+                0x10000642                RSV61_IRQHandler
+                0x10000644                I2C2_IRQHandler
+                0x10000646                RISCV_IRQHandler
+                0x10000648                RSV64_IRQHandler
+                0x1000064a                RSV65_IRQHandler
+                0x1000064c                RSV66_IRQHandler
+                0x1000064e                OWM_IRQHandler
+                0x10000650                RSV68_IRQHandler
+                0x10000652                RSV69_IRQHandler
+                0x10000654                RSV70_IRQHandler
+                0x10000656                RSV71_IRQHandler
+                0x10000658                RSV72_IRQHandler
+                0x1000065a                RSV73_IRQHandler
+                0x1000065c                RSV74_IRQHandler
+                0x1000065e                RSV75_IRQHandler
+                0x10000660                RSV76_IRQHandler
+                0x10000662                RSV77_IRQHandler
+                0x10000664                RSV78_IRQHandler
+                0x10000666                RSV79_IRQHandler
+                0x10000668                RSV80_IRQHandler
+                0x1000066a                RSV81_IRQHandler
+                0x1000066c                ECC_IRQHandler
+                0x1000066e                DVS_IRQHandler
+                0x10000670                SIMO_IRQHandler
+                0x10000672                RSV85_IRQHandler
+                0x10000674                RSV86_IRQHandler
+                0x10000676                RSV87_IRQHandler
+                0x10000678                UART3_IRQHandler
+                0x1000067a                RSV89_IRQHandler
+                0x1000067c                RSV90_IRQHandler
+                0x1000067e                PCIF_IRQHandler
+                0x10000680                RSV92_IRQHandler
+                0x10000682                RSV93_IRQHandler
+                0x10000684                RSV94_IRQHandler
+                0x10000686                RSV95_IRQHandler
+                0x10000688                RSV96_IRQHandler
+                0x1000068a                AES_IRQHandler
+                0x1000068c                RSV98_IRQHandler
+                0x1000068e                I2S_IRQHandler
+                0x10000690                CNN_FIFO_IRQHandler
+                0x10000692                CNN_IRQHandler
+                0x10000694                RSV102_IRQHandler
+                0x10000696                LPCMP_IRQHandler
+ .text._sbrk    0x100006c0       0x38 c:/MaximSDK/Eclipse/Add_2/build/heap.o
+                0x100006c0                _sbrk
  .text.SystemCoreClockUpdate
-                0x100006f0       0x6c c:/MaximSDK/Eclipse/Add_2/build/system_max78000.o
-                0x100006f0                SystemCoreClockUpdate
- .text.PreInit  0x1000075c        0x4 c:/MaximSDK/Eclipse/Add_2/build/system_max78000.o
-                0x1000075c                PreInit
+                0x100006f8       0x6c c:/MaximSDK/Eclipse/Add_2/build/system_max78000.o
+                0x100006f8                SystemCoreClockUpdate
+ .text.PreInit  0x10000764        0x4 c:/MaximSDK/Eclipse/Add_2/build/system_max78000.o
+                0x10000764                PreInit
  .text.SystemInit
-                0x10000760       0x38 c:/MaximSDK/Eclipse/Add_2/build/system_max78000.o
-                0x10000760                SystemInit
+                0x10000768       0x38 c:/MaximSDK/Eclipse/Add_2/build/system_max78000.o
+                0x10000768                SystemInit
  .text.MXC_DelayInit
-                0x10000798       0x80 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+                0x100007a0       0x80 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
  .text.MXC_DelayAsync
-                0x10000818       0x3c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
-                0x10000818                MXC_DelayAsync
+                0x10000820       0x3c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+                0x10000820                MXC_DelayAsync
  .text.MXC_DelayAbort
-                0x10000854       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
-                0x10000854                MXC_DelayAbort
+                0x1000085c       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+                0x1000085c                MXC_DelayAbort
  .text.MXC_DelayCheck
-                0x10000888       0x58 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
-                0x10000888                MXC_DelayCheck
+                0x10000890       0x58 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+                0x10000890                MXC_DelayCheck
  .text.MXC_Delay
-                0x100008e0       0x4c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
-                0x100008e0                MXC_Delay
+                0x100008e8       0x4c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+                0x100008e8                MXC_Delay
  .text.MXC_SYS_ClockDisable
-                0x1000092c       0x44 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
-                0x1000092c                MXC_SYS_ClockDisable
+                0x10000934       0x44 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+                0x10000934                MXC_SYS_ClockDisable
  .text.MXC_SYS_ClockEnable
-                0x10000970       0x4c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
-                0x10000970                MXC_SYS_ClockEnable
+                0x10000978       0x4c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+                0x10000978                MXC_SYS_ClockEnable
  .text.MXC_SYS_Clock_Timeout
-                0x100009bc       0x2e c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
-                0x100009bc                MXC_SYS_Clock_Timeout
+                0x100009c4       0x2e c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+                0x100009c4                MXC_SYS_Clock_Timeout
  .text.MXC_SYS_ClockSourceEnable
-                0x100009ea       0x6c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
-                0x100009ea                MXC_SYS_ClockSourceEnable
- *fill*         0x10000a56        0x2 
+                0x100009f2       0x6c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+                0x100009f2                MXC_SYS_ClockSourceEnable
+ *fill*         0x10000a5e        0x2 
  .text.MXC_SYS_Reset_Periph
-                0x10000a58       0x4c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
-                0x10000a58                MXC_SYS_Reset_Periph
+                0x10000a60       0x4c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+                0x10000a60                MXC_SYS_Reset_Periph
  .text.NVIC_SetRAM
-                0x10000aa4       0x24 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
-                0x10000aa4                NVIC_SetRAM
+                0x10000aac       0x24 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
+                0x10000aac                NVIC_SetRAM
  .text.NVIC_SetVector
-                0x10000ac8       0x3c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
-                0x10000ac8                NVIC_SetVector
+                0x10000ad0       0x3c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
+                0x10000ad0                NVIC_SetVector
  .text.MXC_GPIO_Init
-                0x10000b04       0x22 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10000b04                MXC_GPIO_Init
- *fill*         0x10000b26        0x2 
+                0x10000b0c       0x22 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+                0x10000b0c                MXC_GPIO_Init
+ *fill*         0x10000b2e        0x2 
  .text.MXC_GPIO_Config
-                0x10000b28      0x1e0 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10000b28                MXC_GPIO_Config
+                0x10000b30      0x1e0 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+                0x10000b30                MXC_GPIO_Config
  .text.MXC_GPIO_OutSet
-                0x10000d08       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10000d08                MXC_GPIO_OutSet
+                0x10000d10       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+                0x10000d10                MXC_GPIO_OutSet
  .text.MXC_GPIO_OutClr
-                0x10000d3c       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10000d3c                MXC_GPIO_OutClr
+                0x10000d44       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+                0x10000d44                MXC_GPIO_OutClr
  .text.MXC_GPIO_Handler
-                0x10000d70        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10000d70                MXC_GPIO_Handler
- .text.MXC_GPIO_ClearFlags
-                0x10000d74        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10000d74                MXC_GPIO_ClearFlags
- .text.MXC_GPIO_GetFlags
                 0x10000d78        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
-                0x10000d78                MXC_GPIO_GetFlags
+                0x10000d78                MXC_GPIO_Handler
+ .text.MXC_GPIO_ClearFlags
+                0x10000d7c        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+                0x10000d7c                MXC_GPIO_ClearFlags
+ .text.MXC_GPIO_GetFlags
+                0x10000d80        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+                0x10000d80                MXC_GPIO_GetFlags
  .text.MXC_GPIO_RevA_OutSet
-                0x10000d7c        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10000d7c                MXC_GPIO_RevA_OutSet
- .text.MXC_GPIO_RevA_OutClr
-                0x10000d80        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10000d80                MXC_GPIO_RevA_OutClr
- .text.MXC_GPIO_RevA_ClearFlags
                 0x10000d84        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10000d84                MXC_GPIO_RevA_ClearFlags
- .text.MXC_GPIO_RevA_GetFlags
+                0x10000d84                MXC_GPIO_RevA_OutSet
+ .text.MXC_GPIO_RevA_OutClr
                 0x10000d88        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10000d88                MXC_GPIO_RevA_GetFlags
+                0x10000d88                MXC_GPIO_RevA_OutClr
+ .text.MXC_GPIO_RevA_ClearFlags
+                0x10000d8c        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
+                0x10000d8c                MXC_GPIO_RevA_ClearFlags
+ .text.MXC_GPIO_RevA_GetFlags
+                0x10000d90        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
+                0x10000d90                MXC_GPIO_RevA_GetFlags
  .text.MXC_GPIO_RevA_SetVSSEL
-                0x10000d8c       0x24 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10000d8c                MXC_GPIO_RevA_SetVSSEL
+                0x10000d94       0x24 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
+                0x10000d94                MXC_GPIO_RevA_SetVSSEL
  .text.MXC_GPIO_RevA_SetAF
-                0x10000db0       0x3a c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
-                0x10000db0                MXC_GPIO_RevA_SetAF
+                0x10000db8       0x3a c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
+                0x10000db8                MXC_GPIO_RevA_SetAF
  .text.MXC_ICC_Enable
-                0x10000dea        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_me17.o)
-                0x10000dea                MXC_ICC_Enable
+                0x10000df2        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_me17.o)
+                0x10000df2                MXC_ICC_Enable
  .text.MXC_ICC_RevA_Enable
-                0x10000dee       0x30 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_reva.o)
-                0x10000dee                MXC_ICC_RevA_Enable
- *fill*         0x10000e1e        0x2 
+                0x10000df6       0x30 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_reva.o)
+                0x10000df6                MXC_ICC_RevA_Enable
+ *fill*         0x10000e26        0x2 
  .text.MXC_UART_GetFrequency.part.1
-                0x10000e20       0x54 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x10000e28       0x54 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
  .text.MXC_UART_AsyncCallback
-                0x10000e74        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10000e74                MXC_UART_AsyncCallback
+                0x10000e7c        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x10000e7c                MXC_UART_AsyncCallback
  .text.MXC_UART_AsyncStop
-                0x10000e78        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10000e78                MXC_UART_AsyncStop
+                0x10000e80        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x10000e80                MXC_UART_AsyncStop
  .text.MXC_UART_Shutdown
-                0x10000e7c       0x60 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10000e7c                MXC_UART_Shutdown
+                0x10000e84       0x60 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x10000e84                MXC_UART_Shutdown
  .text.MXC_UART_Init
-                0x10000edc       0x98 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10000edc                MXC_UART_Init
+                0x10000ee4       0x98 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x10000ee4                MXC_UART_Init
  .text.MXC_UART_SetFrequency
-                0x10000f74       0xb8 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10000f74                MXC_UART_SetFrequency
+                0x10000f7c       0xb8 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x10000f7c                MXC_UART_SetFrequency
  .text.MXC_UART_GetFrequency
-                0x1000102c       0x30 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x1000102c                MXC_UART_GetFrequency
+                0x10001034       0x30 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x10001034                MXC_UART_GetFrequency
  .text.MXC_UART_SetDataSize
-                0x1000105c        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x1000105c                MXC_UART_SetDataSize
- .text.MXC_UART_SetStopBits
-                0x10001060        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10001060                MXC_UART_SetStopBits
- .text.MXC_UART_SetParity
                 0x10001064        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10001064                MXC_UART_SetParity
- .text.MXC_UART_ReadCharacterRaw
+                0x10001064                MXC_UART_SetDataSize
+ .text.MXC_UART_SetStopBits
                 0x10001068        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10001068                MXC_UART_ReadCharacterRaw
- .text.MXC_UART_WriteCharacterRaw
+                0x10001068                MXC_UART_SetStopBits
+ .text.MXC_UART_SetParity
                 0x1000106c        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x1000106c                MXC_UART_WriteCharacterRaw
- .text.MXC_UART_ReadCharacter
+                0x1000106c                MXC_UART_SetParity
+ .text.MXC_UART_ReadCharacterRaw
                 0x10001070        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10001070                MXC_UART_ReadCharacter
- .text.MXC_UART_WriteCharacter
+                0x10001070                MXC_UART_ReadCharacterRaw
+ .text.MXC_UART_WriteCharacterRaw
                 0x10001074        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10001074                MXC_UART_WriteCharacter
- .text.MXC_UART_ReadRXFIFO
+                0x10001074                MXC_UART_WriteCharacterRaw
+ .text.MXC_UART_ReadCharacter
                 0x10001078        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10001078                MXC_UART_ReadRXFIFO
- .text.MXC_UART_GetRXFIFOAvailable
+                0x10001078                MXC_UART_ReadCharacter
+ .text.MXC_UART_WriteCharacter
                 0x1000107c        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x1000107c                MXC_UART_GetRXFIFOAvailable
- .text.MXC_UART_WriteTXFIFO
+                0x1000107c                MXC_UART_WriteCharacter
+ .text.MXC_UART_ReadRXFIFO
                 0x10001080        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10001080                MXC_UART_WriteTXFIFO
- .text.MXC_UART_GetTXFIFOAvailable
+                0x10001080                MXC_UART_ReadRXFIFO
+ .text.MXC_UART_GetRXFIFOAvailable
                 0x10001084        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10001084                MXC_UART_GetTXFIFOAvailable
- .text.MXC_UART_ClearRXFIFO
+                0x10001084                MXC_UART_GetRXFIFOAvailable
+ .text.MXC_UART_WriteTXFIFO
                 0x10001088        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10001088                MXC_UART_ClearRXFIFO
- .text.MXC_UART_ClearTXFIFO
+                0x10001088                MXC_UART_WriteTXFIFO
+ .text.MXC_UART_GetTXFIFOAvailable
                 0x1000108c        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x1000108c                MXC_UART_ClearTXFIFO
- .text.MXC_UART_SetRXThreshold
+                0x1000108c                MXC_UART_GetTXFIFOAvailable
+ .text.MXC_UART_ClearRXFIFO
                 0x10001090        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10001090                MXC_UART_SetRXThreshold
- .text.MXC_UART_GetRXThreshold
+                0x10001090                MXC_UART_ClearRXFIFO
+ .text.MXC_UART_ClearTXFIFO
                 0x10001094        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10001094                MXC_UART_GetRXThreshold
- .text.MXC_UART_GetFlags
+                0x10001094                MXC_UART_ClearTXFIFO
+ .text.MXC_UART_SetRXThreshold
                 0x10001098        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x10001098                MXC_UART_GetFlags
- .text.MXC_UART_ClearFlags
+                0x10001098                MXC_UART_SetRXThreshold
+ .text.MXC_UART_GetRXThreshold
                 0x1000109c        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x1000109c                MXC_UART_ClearFlags
- .text.MXC_UART_EnableInt
+                0x1000109c                MXC_UART_GetRXThreshold
+ .text.MXC_UART_GetFlags
                 0x100010a0        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100010a0                MXC_UART_EnableInt
- .text.MXC_UART_DisableInt
+                0x100010a0                MXC_UART_GetFlags
+ .text.MXC_UART_ClearFlags
                 0x100010a4        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100010a4                MXC_UART_DisableInt
- .text.MXC_UART_TransactionAsync
+                0x100010a4                MXC_UART_ClearFlags
+ .text.MXC_UART_EnableInt
                 0x100010a8        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100010a8                MXC_UART_TransactionAsync
- .text.MXC_UART_AsyncHandler
+                0x100010a8                MXC_UART_EnableInt
+ .text.MXC_UART_DisableInt
                 0x100010ac        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
-                0x100010ac                MXC_UART_AsyncHandler
+                0x100010ac                MXC_UART_DisableInt
+ .text.MXC_UART_TransactionAsync
+                0x100010b0        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x100010b0                MXC_UART_TransactionAsync
+ .text.MXC_UART_AsyncHandler
+                0x100010b4        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+                0x100010b4                MXC_UART_AsyncHandler
  .text.MXC_UART_Common_ReadCharacter
-                0x100010b0       0x18 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
-                0x100010b0                MXC_UART_Common_ReadCharacter
+                0x100010b8       0x18 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
+                0x100010b8                MXC_UART_Common_ReadCharacter
  .text.MXC_UART_Common_WriteCharacter
-                0x100010c8       0x1c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
-                0x100010c8                MXC_UART_Common_WriteCharacter
+                0x100010d0       0x1c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
+                0x100010d0                MXC_UART_Common_WriteCharacter
  .text.MXC_UART_RevB_Init
-                0x100010e4       0x68 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100010e4                MXC_UART_RevB_Init
+                0x100010ec       0x68 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100010ec                MXC_UART_RevB_Init
  .text.MXC_UART_RevB_SetFrequency
-                0x1000114c       0x88 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x1000114c                MXC_UART_RevB_SetFrequency
+                0x10001154       0x88 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001154                MXC_UART_RevB_SetFrequency
  .text.MXC_UART_RevB_GetFrequency
-                0x100011d4       0x68 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100011d4                MXC_UART_RevB_GetFrequency
+                0x100011dc       0x68 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100011dc                MXC_UART_RevB_GetFrequency
  .text.MXC_UART_RevB_SetDataSize
-                0x1000123c       0x40 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x1000123c                MXC_UART_RevB_SetDataSize
+                0x10001244       0x40 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001244                MXC_UART_RevB_SetDataSize
  .text.MXC_UART_RevB_SetStopBits
-                0x1000127c       0x44 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x1000127c                MXC_UART_RevB_SetStopBits
+                0x10001284       0x44 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001284                MXC_UART_RevB_SetStopBits
  .text.MXC_UART_RevB_SetParity
-                0x100012c0       0x94 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100012c0                MXC_UART_RevB_SetParity
+                0x100012c8       0x94 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100012c8                MXC_UART_RevB_SetParity
  .text.MXC_UART_RevB_ReadCharacterRaw
-                0x10001354       0x38 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10001354                MXC_UART_RevB_ReadCharacterRaw
+                0x1000135c       0x38 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x1000135c                MXC_UART_RevB_ReadCharacterRaw
  .text.MXC_UART_RevB_WriteCharacterRaw
-                0x1000138c       0x3c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x1000138c                MXC_UART_RevB_WriteCharacterRaw
+                0x10001394       0x3c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001394                MXC_UART_RevB_WriteCharacterRaw
  .text.MXC_UART_RevB_ReadRXFIFO
-                0x100013c8       0x1a c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100013c8                MXC_UART_RevB_ReadRXFIFO
+                0x100013d0       0x1a c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100013d0                MXC_UART_RevB_ReadRXFIFO
  .text.MXC_UART_RevB_GetRXFIFOAvailable
-                0x100013e2        0x8 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100013e2                MXC_UART_RevB_GetRXFIFOAvailable
+                0x100013ea        0x8 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100013ea                MXC_UART_RevB_GetRXFIFOAvailable
  .text.MXC_UART_RevB_WriteTXFIFO
-                0x100013ea       0x1a c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100013ea                MXC_UART_RevB_WriteTXFIFO
+                0x100013f2       0x1a c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100013f2                MXC_UART_RevB_WriteTXFIFO
  .text.MXC_UART_RevB_GetTXFIFOAvailable
-                0x10001404        0xc c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10001404                MXC_UART_RevB_GetTXFIFOAvailable
+                0x1000140c        0xc c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x1000140c                MXC_UART_RevB_GetTXFIFOAvailable
  .text.MXC_UART_RevB_ClearRXFIFO
-                0x10001410       0x3c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10001410                MXC_UART_RevB_ClearRXFIFO
+                0x10001418       0x3c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001418                MXC_UART_RevB_ClearRXFIFO
  .text.MXC_UART_RevB_ClearTXFIFO
-                0x1000144c       0x3c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x1000144c                MXC_UART_RevB_ClearTXFIFO
+                0x10001454       0x3c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001454                MXC_UART_RevB_ClearTXFIFO
  .text.MXC_UART_RevB_SetRXThreshold
-                0x10001488       0x3c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10001488                MXC_UART_RevB_SetRXThreshold
+                0x10001490       0x3c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001490                MXC_UART_RevB_SetRXThreshold
  .text.MXC_UART_RevB_GetRXThreshold
-                0x100014c4        0x8 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100014c4                MXC_UART_RevB_GetRXThreshold
+                0x100014cc        0x8 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100014cc                MXC_UART_RevB_GetRXThreshold
  .text.MXC_UART_RevB_GetFlags
-                0x100014cc        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100014cc                MXC_UART_RevB_GetFlags
+                0x100014d4        0x4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100014d4                MXC_UART_RevB_GetFlags
  .text.MXC_UART_RevB_ClearFlags
-                0x100014d0       0x30 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100014d0                MXC_UART_RevB_ClearFlags
+                0x100014d8       0x30 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100014d8                MXC_UART_RevB_ClearFlags
  .text.MXC_UART_RevB_EnableInt
-                0x10001500       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10001500                MXC_UART_RevB_EnableInt
+                0x10001508       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001508                MXC_UART_RevB_EnableInt
  .text.MXC_UART_RevB_DisableInt
-                0x10001534       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10001534                MXC_UART_RevB_DisableInt
+                0x1000153c       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x1000153c                MXC_UART_RevB_DisableInt
  .text.MXC_UART_RevB_TransactionAsync
-                0x10001568      0x1d8 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10001568                MXC_UART_RevB_TransactionAsync
+                0x10001570      0x1d8 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001570                MXC_UART_RevB_TransactionAsync
  .text.MXC_UART_RevB_AsyncTxCallback
-                0x10001740       0x58 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10001740                MXC_UART_RevB_AsyncTxCallback
+                0x10001748       0x58 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001748                MXC_UART_RevB_AsyncTxCallback
  .text.MXC_UART_RevB_AsyncRxCallback
-                0x10001798       0x58 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10001798                MXC_UART_RevB_AsyncRxCallback
+                0x100017a0       0x58 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100017a0                MXC_UART_RevB_AsyncRxCallback
  .text.MXC_UART_RevB_AsyncCallback
-                0x100017f0       0x68 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100017f0                MXC_UART_RevB_AsyncCallback
+                0x100017f8       0x68 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100017f8                MXC_UART_RevB_AsyncCallback
  .text.MXC_UART_RevB_AsyncStopTx
-                0x10001858       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x10001858                MXC_UART_RevB_AsyncStopTx
+                0x10001860       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001860                MXC_UART_RevB_AsyncStopTx
  .text.MXC_UART_RevB_AsyncStopRx
-                0x1000188c       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x1000188c                MXC_UART_RevB_AsyncStopRx
+                0x10001894       0x34 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001894                MXC_UART_RevB_AsyncStopRx
  .text.MXC_UART_RevB_AsyncStop
-                0x100018c0       0x38 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100018c0                MXC_UART_RevB_AsyncStop
+                0x100018c8       0x38 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x100018c8                MXC_UART_RevB_AsyncStop
  .text.MXC_UART_RevB_AsyncHandler
-                0x100018f8      0x188 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
-                0x100018f8                MXC_UART_RevB_AsyncHandler
+                0x10001900      0x188 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+                0x10001900                MXC_UART_RevB_AsyncHandler
  .text.MXC_GPIO_Common_Init
-                0x10001a80       0x30 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
-                0x10001a80                MXC_GPIO_Common_Init
+                0x10001a88       0x30 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
+                0x10001a88                MXC_GPIO_Common_Init
  .text.MXC_GPIO_Common_Handler
-                0x10001ab0       0x7c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
-                0x10001ab0                MXC_GPIO_Common_Handler
- .text.__errno  0x10001b2c        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-errno.o)
-                0x10001b2c                __errno
+                0x10001ab8       0x7c c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
+                0x10001ab8                MXC_GPIO_Common_Handler
+ .text.__errno  0x10001b34        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-errno.o)
+                0x10001b34                __errno
  .text.__libc_init_array
-                0x10001b38       0x48 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-init.o)
-                0x10001b38                __libc_init_array
+                0x10001b40       0x48 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-init.o)
+                0x10001b40                __libc_init_array
  .text._malloc_r
-                0x10001b80      0x574 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mallocr.o)
-                0x10001b80                _malloc_r
- .text          0x100020f4      0x134 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-memcpy.o)
-                0x100020f4                memcpy
- .text.memset   0x10002228       0xa0 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-memset.o)
-                0x10002228                memset
+                0x10001b88      0x574 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mallocr.o)
+                0x10001b88                _malloc_r
+ .text          0x100020fc      0x134 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-memcpy.o)
+                0x100020fc                memcpy
+ .text.memset   0x10002230       0xa0 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-memset.o)
+                0x10002230                memset
  .text.__malloc_lock
-                0x100022c8        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mlock.o)
-                0x100022c8                __malloc_lock
+                0x100022d0        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mlock.o)
+                0x100022d0                __malloc_lock
  .text.__malloc_unlock
-                0x100022d4        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mlock.o)
-                0x100022d4                __malloc_unlock
- .text.printf   0x100022e0       0x28 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-printf.o)
-                0x100022e0                printf
- .text._puts_r  0x10002308       0x9c c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-puts.o)
-                0x10002308                _puts_r
- .text.puts     0x100023a4       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-puts.o)
-                0x100023a4                puts
- .text._sbrk_r  0x100023b4       0x24 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-sbrkr.o)
-                0x100023b4                _sbrk_r
- *fill*         0x100023d8       0x28 
+                0x100022dc        0xc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-mlock.o)
+                0x100022dc                __malloc_unlock
+ .text.printf   0x100022e8       0x28 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-printf.o)
+                0x100022e8                printf
+ .text._puts_r  0x10002310       0x9c c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-puts.o)
+                0x10002310                _puts_r
+ .text.puts     0x100023ac       0x10 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-puts.o)
+                0x100023ac                puts
+ .text._sbrk_r  0x100023bc       0x24 c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-sbrkr.o)
+                0x100023bc                _sbrk_r
+ *fill*         0x100023e0       0x20 
  .text          0x10002400       0xdc c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc.a(lib_a-strlen.o)
                 0x10002400                strlen
  *fill*         0x100024dc        0x4 
@@ -5844,12 +5844,11 @@ LOAD c:/maximsdk/tools/gnutools/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+f
                 0x10007a90                __aeabi_ldiv0
  *(.rodata*)
  .rodata.main.str1.1
-                0x10007a94       0x83 c:/MaximSDK/Eclipse/Add_2/build/main.o
+                0x10007a94       0x84 c:/MaximSDK/Eclipse/Add_2/build/main.o
  .rodata.mxc_assert.str1.1
-                0x10007b17       0x19 c:/MaximSDK/Eclipse/Add_2/build/board.o
+                0x10007b18       0x19 c:/MaximSDK/Eclipse/Add_2/build/board.o
  .rodata.Board_Init.str1.1
-                0x10007b30       0x43 c:/MaximSDK/Eclipse/Add_2/build/board.o
- *fill*         0x10007b73        0x1 
+                0x10007b31       0x43 c:/MaximSDK/Eclipse/Add_2/build/board.o
  .rodata.led_pin
                 0x10007b74       0x18 c:/MaximSDK/Eclipse/Add_2/build/board.o
                 0x10007b74                led_pin
@@ -6302,26 +6301,26 @@ OUTPUT(c:/MaximSDK/Eclipse/Add_2/build/Add_2.elf elf32-littlearm)
  .comment       0x000000f8       0x80 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
  .comment       0x000000f8       0x80 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
 
-.debug_info     0x00000000    0x14697
- .debug_info    0x00000000     0x1949 c:/MaximSDK/Eclipse/Add_2/build/main.o
- .debug_info    0x00001949     0x152d c:/MaximSDK/Eclipse/Add_2/build/board.o
- .debug_info    0x00002e76     0x1541 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
- .debug_info    0x000043b7     0x112b c:/MaximSDK/Eclipse/Add_2/build/led.o
- .debug_info    0x000054e2      0xf12 c:/MaximSDK/Eclipse/Add_2/build/pb.o
- .debug_info    0x000063f4      0xa22 c:/MaximSDK/Eclipse/Add_2/build/heap.o
- .debug_info    0x00006e16     0x147f c:/MaximSDK/Eclipse/Add_2/build/system_max78000.o
- .debug_info    0x00008295      0x885 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
- .debug_info    0x00008b1a      0x89f c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
- .debug_info    0x000093b9     0x1828 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
- .debug_info    0x0000abe1     0x1528 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
- .debug_info    0x0000c109     0x11a5 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
- .debug_info    0x0000d2ae      0xb2a c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
- .debug_info    0x0000ddd8      0x8ca c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_me17.o)
- .debug_info    0x0000e6a2      0x7c0 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_reva.o)
- .debug_info    0x0000ee62     0x1da4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
- .debug_info    0x00010c06      0x7eb c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
- .debug_info    0x000113f1     0x2a75 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
- .debug_info    0x00013e66      0x831 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
+.debug_info     0x00000000    0x146ae
+ .debug_info    0x00000000     0x1960 c:/MaximSDK/Eclipse/Add_2/build/main.o
+ .debug_info    0x00001960     0x152d c:/MaximSDK/Eclipse/Add_2/build/board.o
+ .debug_info    0x00002e8d     0x1541 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
+ .debug_info    0x000043ce     0x112b c:/MaximSDK/Eclipse/Add_2/build/led.o
+ .debug_info    0x000054f9      0xf12 c:/MaximSDK/Eclipse/Add_2/build/pb.o
+ .debug_info    0x0000640b      0xa22 c:/MaximSDK/Eclipse/Add_2/build/heap.o
+ .debug_info    0x00006e2d     0x147f c:/MaximSDK/Eclipse/Add_2/build/system_max78000.o
+ .debug_info    0x000082ac      0x885 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+ .debug_info    0x00008b31      0x89f c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
+ .debug_info    0x000093d0     0x1828 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+ .debug_info    0x0000abf8     0x1528 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
+ .debug_info    0x0000c120     0x11a5 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+ .debug_info    0x0000d2c5      0xb2a c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
+ .debug_info    0x0000ddef      0x8ca c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_me17.o)
+ .debug_info    0x0000e6b9      0x7c0 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_reva.o)
+ .debug_info    0x0000ee79     0x1da4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+ .debug_info    0x00010c1d      0x7eb c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
+ .debug_info    0x00011408     0x2a75 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+ .debug_info    0x00013e7d      0x831 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
 
 .debug_abbrev   0x00000000     0x2e49
  .debug_abbrev  0x00000000      0x3bc c:/MaximSDK/Eclipse/Add_2/build/main.o
@@ -6536,26 +6535,26 @@ OUTPUT(c:/MaximSDK/Eclipse/Add_2/build/Add_2.elf elf32-littlearm)
  .debug_macro   0x0000a663      0x2b5 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
  .debug_macro   0x0000a918       0xfe c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
 
-.debug_line     0x00000000     0x6586
- .debug_line    0x00000000      0x720 c:/MaximSDK/Eclipse/Add_2/build/main.o
- .debug_line    0x00000720      0x5fc c:/MaximSDK/Eclipse/Add_2/build/board.o
- .debug_line    0x00000d1c      0x6d4 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
- .debug_line    0x000013f0      0x5c3 c:/MaximSDK/Eclipse/Add_2/build/led.o
- .debug_line    0x000019b3      0x594 c:/MaximSDK/Eclipse/Add_2/build/pb.o
- .debug_line    0x00001f47      0x33f c:/MaximSDK/Eclipse/Add_2/build/heap.o
- .debug_line    0x00002286      0x567 c:/MaximSDK/Eclipse/Add_2/build/system_max78000.o
- .debug_line    0x000027ed      0x405 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
- .debug_line    0x00002bf2      0x2d5 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
- .debug_line    0x00002ec7      0x613 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
- .debug_line    0x000034da      0x3ec c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
- .debug_line    0x000038c6      0x55e c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
- .debug_line    0x00003e24      0x44e c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
- .debug_line    0x00004272      0x3a1 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_me17.o)
- .debug_line    0x00004613      0x3a4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_reva.o)
- .debug_line    0x000049b7      0x7b6 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
- .debug_line    0x0000516d      0x35b c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
- .debug_line    0x000054c8      0xcf0 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
- .debug_line    0x000061b8      0x3ce c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
+.debug_line     0x00000000     0x6587
+ .debug_line    0x00000000      0x721 c:/MaximSDK/Eclipse/Add_2/build/main.o
+ .debug_line    0x00000721      0x5fc c:/MaximSDK/Eclipse/Add_2/build/board.o
+ .debug_line    0x00000d1d      0x6d4 c:/MaximSDK/Eclipse/Add_2/build/stdio.o
+ .debug_line    0x000013f1      0x5c3 c:/MaximSDK/Eclipse/Add_2/build/led.o
+ .debug_line    0x000019b4      0x594 c:/MaximSDK/Eclipse/Add_2/build/pb.o
+ .debug_line    0x00001f48      0x33f c:/MaximSDK/Eclipse/Add_2/build/heap.o
+ .debug_line    0x00002287      0x567 c:/MaximSDK/Eclipse/Add_2/build/system_max78000.o
+ .debug_line    0x000027ee      0x405 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(mxc_delay.o)
+ .debug_line    0x00002bf3      0x2d5 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(pins_ai85.o)
+ .debug_line    0x00002ec8      0x613 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(sys_ai85.o)
+ .debug_line    0x000034db      0x3ec c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(nvic_table.o)
+ .debug_line    0x000038c7      0x55e c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_ai85.o)
+ .debug_line    0x00003e25      0x44e c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_reva.o)
+ .debug_line    0x00004273      0x3a1 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_me17.o)
+ .debug_line    0x00004614      0x3a4 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(icc_reva.o)
+ .debug_line    0x000049b8      0x7b6 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_ai85.o)
+ .debug_line    0x0000516e      0x35b c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_common.o)
+ .debug_line    0x000054c9      0xcf0 c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(uart_revb.o)
+ .debug_line    0x000061b9      0x3ce c:/MaximSDK/Libraries/PeriphDrivers/bin/MAX78000/softfp/libPeriphDriver_softfp.a(gpio_common.o)
 
 .debug_str      0x00000000    0x2bfb8
  .debug_str     0x00000000    0x1cb9a c:/MaximSDK/Eclipse/Add_2/build/main.o
