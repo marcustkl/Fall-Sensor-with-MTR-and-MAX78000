@@ -19,6 +19,10 @@ def print_result(filename, result):
 def input_value(sport):
         val = int(input("Enter your value: "))
         sport.write(struct.pack('i', val))
+        
+def send_value(sport, val):
+        sport.write(struct.pack('i', val))
+
     
 
 
@@ -37,9 +41,29 @@ def main():
     # Open device with default description
     sport = serial.Serial(args.device, SERIAL_BAUD, timeout = SERIAL_TOUT)
     
-    input_value(sport)
+    # input_value(sport)
     
     result = []
+    
+    # send range of values
+    for i in range(0,10):
+        send_value(sport, i)
+        while 1:
+            char = sport.read(1)
+            if char == b'':
+                print("Empty char received")
+                break
+            result.append(char.decode('utf-8'))
+            if char == b'\n':
+                result = "".join(result)
+                print(result)
+                result = []
+                sport.reset_input_buffer()
+                break
+            sleep(0.1)
+            
+    # send user input value
+    input_value(sport)
     while 1:
         char = sport.read(1)
         if char == b'':
@@ -49,7 +73,7 @@ def main():
             result = "".join(result)
             print(result)
             result = []
-            # sport.reset_input_buffer()
+            sport.reset_input_buffer()
         sleep(0.1)
     
 if __name__ == "__main__":
