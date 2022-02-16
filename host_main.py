@@ -23,9 +23,6 @@ def input_value(sport):
 def send_value(sport, val):
         sport.write(struct.pack('i', val))
 
-    
-
-
 def main():
     """ main function """
     parser = argparse.ArgumentParser(description = "Test sending and receiving data from MAX78000 UART",
