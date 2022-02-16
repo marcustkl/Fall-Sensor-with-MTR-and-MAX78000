@@ -37,7 +37,7 @@ The host application requires Python 3.7.x or 3.8.x.  Python 2.x and 3.9 are not
 
 ## Preparing the MAX78000EVKIT
 
-* Deploy the MAX78000 project in this directory by following the instructions:
+### Deploy the MAX78000 project in this directory by following the instructions:
 
 For Linux: [Loading and Running Applications on the EV Kit](https://github.com/MaximIntegratedAI/MaximAI_Documentation/blob/master/MAX78000_Evaluation_Kit/README.md#loading-and-running-applications-on-the-ev-kit)
 
