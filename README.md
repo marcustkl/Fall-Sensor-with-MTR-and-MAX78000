@@ -16,7 +16,7 @@ This project aims to explore the UART connection between a host machine and MAX7
 ## Preparing the host machine
 The host application communicates with the MAX78000EVKIT using the USB-to-UART bridge, by sending a range of integers from the host machine to the MAX78000EVKIT.
 
-The host application is written in Python and uses the following packages:
+The host application only runs in Linux and is written in Python and uses the following packages:
 
 - pyserial -- USB-to-UART communications
 - Pillow --  image data access
