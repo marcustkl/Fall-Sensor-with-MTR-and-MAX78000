@@ -4,7 +4,7 @@ This project aims to explore the UART connection between a host machine and MAX7
 
 ## Preparing the MAX78000EVKIT board
 
-#### Configure MAX78000EVKIT for running cifar-10-auto-test:
+#### Configure MAX78000EVKIT for running Add-2 demo:
 
 * Turn MAX78000EVKIT off by placing SW1 in the OFF position
 
@@ -20,6 +20,7 @@ The host application is written in Python and uses the following packages:
 
 - pyserial -- USB-to-UART communications
 - Pillow --  image data access
+- metawear -- api library for connection to [MetaTracker](https://mbientlab.com/metatracker/) sensor. GitHub repo for the metawear python sdk: https://github.com/mbientlab/MetaWear-SDK-Python
 
 The host application requires Python 3.7.x or 3.8.x.  Python 2.x and 3.9 are not supported.
 
@@ -29,7 +30,9 @@ The host application requires Python 3.7.x or 3.8.x.  Python 2.x and 3.9 are not
 
 * Create virtual environment: `python -m venv env`
 
-* Activate virtual environment: `.\env\Scripts\activate`
+* Activate virtual environment: 
+    * Windows: `.\env\Scripts\activate`
+    * Linux: `source env/bin/activate`
 
 * Install python modules: `pip install -r requirements.txt`
 
