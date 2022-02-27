@@ -1,9 +1,12 @@
 # usage: sudo python stream_acc_gyro_bmi1.py
 from __future__ import print_function
+from multiprocessing.dummy import Value
 from mbientlab.metawear import MetaWear, libmetawear, parse_value
 from mbientlab.metawear.cbindings import *
 from time import sleep
 from threading import Event
+from queue import Queue
+from copy import deepcopy
 
 import platform
 import sys
@@ -15,15 +18,21 @@ class State:
         self.samples = 0
         self.accCallback = FnVoid_VoidP_DataP(self.acc_data_handler)
         self.gyroCallback = FnVoid_VoidP_DataP(self.gyro_data_handler)
+        self.readings = Queue(maxsize = 2)
         
     # acc callback function
     def acc_data_handler(self, ctx, data):
-        print("ACC: %s -> %s" % (self.device.address, parse_value(data)))
+        value = deepcopy(parse_value(data))
+        print("ACC: %s -> %s" % (self.device.address, value))
+        self.readings.put_nowait(value)
         self.samples+= 1
                 
     # gyro callback function
     def gyro_data_handler(self, ctx, data):
-        print("GYRO: %s -> %s" % (self.device.address, parse_value(data)))
+        value = deepcopy(parse_value(data))
+        print("GYRO: %s -> %s" % (self.device.address, value))
+        self.readings.put_nowait(value)
+        print("ACC: %s GYRO: %s" % (self.readings.get_nowait(), self.readings.get_nowait()))
         self.samples+= 1
 
 # init
