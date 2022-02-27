@@ -38,6 +38,12 @@ The host application requires Python 3.7.x or 3.8.x.  Python 2.x and 3.9 are not
 
 * Run project: `python host_main.py --device <device>` where `--device` specifies the serial port associated with the MAX78000EVKIT USB-to-UART bridge
 
+## Preparing the MetaTracker
+
+Ensure that the MetaTracker still has battery, by running `sudo python led.py`. If the led on the MetaTracker does not light up, replace the battery in the tracker with a new CR2450 coin cell.
+
+MAC Address of MetaTracker: `C5:DE:74:B6:AC:5F`
+
 ## Preparing the MAX78000EVKIT
 
 ### Deploy the MAX78000 project in this directory by following the instructions:
