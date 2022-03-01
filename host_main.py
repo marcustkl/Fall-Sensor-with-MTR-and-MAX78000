@@ -23,8 +23,8 @@ def input_value(sport):
 def send_value(sport, val):
         sport.write(struct.pack('i', val))
         
-def send_float(sport, val: float):
-        sport.write(struct.pack('f', val))
+def send_float(sport, val):
+        sport.write(struct.pack('ffffff', *val))
 
 def main():
     """ main function """
@@ -65,7 +65,7 @@ def main():
     # send user input value
     # input_value(sport)
         
-    send_float(sport, 0.001)
+    send_float(sport, [0.001, 0.002, 0.003, 0.004, 0.005, 0.006])
     while 1:
         char = sport.read(1)
         if char == b'':
@@ -75,8 +75,8 @@ def main():
             result = "".join(result)
             print(result)
             result = []
-            sport.reset_input_buffer()
-        sleep(0.1)
+        #     sport.reset_input_buffer()
+        # sleep(0.1)
     
 if __name__ == "__main__":
     main()

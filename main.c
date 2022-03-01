@@ -57,7 +57,7 @@
 
 #define UART_BAUD           115200
 #define BUFF_SIZE           1024
-#define DATA_LEN			4
+#define DATA_LEN			4*6
 
 /***** Globals *****/
 volatile int READ_FLAG;
@@ -216,10 +216,14 @@ int main(void)
 //		// Prints received value, which is stored in memory location: RxData
 //		printf("\rReceived data: %d. Add 2 to data: %d\n", *RxData, value);
 
-		float value;
-		memcpy(&value, &RxData, sizeof(float));
-//		printf("\rReceived data: %0.6f.", value);
-		printf("\rReceived data: %0.6f.", *RxData);
+		float values[6];
+		memcpy(&values, &RxData, sizeof(float)*6);
+
+		printf("\rReceived data: %0.6f %0.6f %0.6f %0.6f %0.6f %0.6f\n",
+				values[0], values[1], values[2],
+				values[3], values[4], values[5]);
+
+		printf("\r----------------\n");
 
 		// Adding delay of 1 sec updates the value of RxData
 		MXC_Delay(SEC(1));
