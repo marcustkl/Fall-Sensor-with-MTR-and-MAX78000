@@ -18,21 +18,23 @@ class State:
         self.samples = 0
         self.accCallback = FnVoid_VoidP_DataP(self.acc_data_handler)
         self.gyroCallback = FnVoid_VoidP_DataP(self.gyro_data_handler)
-        self.readings = Queue(maxsize = 2)
-        
+        self.readings = Queue()
+
     # acc callback function
     def acc_data_handler(self, ctx, data):
         value = deepcopy(parse_value(data))
-        print("ACC: %s -> %s" % (self.device.address, value))
-        self.readings.put_nowait(value)
+        self.readings.put_nowait([value.x, value.y, value.z])
         self.samples+= 1
-                
+
     # gyro callback function
     def gyro_data_handler(self, ctx, data):
         value = deepcopy(parse_value(data))
-        print("GYRO: %s -> %s" % (self.device.address, value))
-        self.readings.put_nowait(value)
-        print("ACC: %s GYRO: %s" % (self.readings.get_nowait(), self.readings.get_nowait()))
+        acc = self.readings.get_nowait()
+        gyro = [value.x, value.y, value.z]
+        # [acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z]
+        value_acc_gyro = acc + gyro
+        print("ACC: %s GYRO: %s" % (value_acc_gyro[0:3], value_acc_gyro[3:]))
+        print("--------------------")
         self.samples+= 1
 
 # init
