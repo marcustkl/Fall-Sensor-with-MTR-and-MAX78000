@@ -210,11 +210,17 @@ int main(void)
 			printf("-->Error with UART_ReadAsync callback; %d\n", READ_FLAG);
 		}
 
-		// add 2 to received data
-		uint32_t value = *(uint32_t *)RxData + 2;
+//		// add 2 to received data
+//		uint32_t value = *(uint32_t *)RxData + 2;
+//
+//		// Prints received value, which is stored in memory location: RxData
+//		printf("\rReceived data: %d. Add 2 to data: %d\n", *RxData, value);
 
-		// Prints received value, which is stored in memory location: RxData
-		printf("\rReceived data: %d. Add 2 to data: %d\n", *RxData, value);
+		float value;
+		memcpy(&value, &RxData, sizeof(float));
+//		printf("\rReceived data: %0.6f.", value);
+		printf("\rReceived data: %0.6f.", *RxData);
+
 		// Adding delay of 1 sec updates the value of RxData
 		MXC_Delay(SEC(1));
 

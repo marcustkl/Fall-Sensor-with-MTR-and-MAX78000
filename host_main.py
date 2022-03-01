@@ -22,6 +22,9 @@ def input_value(sport):
         
 def send_value(sport, val):
         sport.write(struct.pack('i', val))
+        
+def send_float(sport, val: float):
+        sport.write(struct.pack('f', val))
 
 def main():
     """ main function """
@@ -42,25 +45,27 @@ def main():
     
     result = []
     
-    # send range of values
-    for i in range(0,10):
-        send_value(sport, i)
-        while 1:
-            char = sport.read(1)
-            if char == b'':
-                print("Empty char received")
-                break
-            result.append(char.decode('utf-8'))
-            if char == b'\n':
-                result = "".join(result)
-                print(result)
-                result = []
-                sport.reset_input_buffer()
-                break
-            sleep(0.1)
+    # # send range of values
+    # for i in range(0,10):
+    #     send_value(sport, i)
+    #     while 1:
+    #         char = sport.read(1)
+    #         if char == b'':
+    #             print("Empty char received")
+    #             break
+    #         result.append(char.decode('utf-8'))
+    #         if char == b'\n':
+    #             result = "".join(result)
+    #             print(result)
+    #             result = []
+    #             sport.reset_input_buffer()
+    #             break
+    #         sleep(0.1)
             
     # send user input value
-    input_value(sport)
+    # input_value(sport)
+        
+    send_float(sport, 0.001)
     while 1:
         char = sport.read(1)
         if char == b'':
