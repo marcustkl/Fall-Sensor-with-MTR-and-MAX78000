@@ -28,7 +28,7 @@ def print_result(filename, result):
     print("{0}\t{1}".format(filename, result), end = '')
 
 def send_readings(sport, readings):
-        results = []
+        result = []
         sport.write(struct.pack('ffffff', *readings))
         print("Sent Data: %s" % (readings))
         while 1:
@@ -54,7 +54,6 @@ class State:
         self.gyroCallback = FnVoid_VoidP_DataP(self.gyro_data_handler)
         self.readings = Queue()
         self.sport = sport
-        self.results = []
 
     # acc callback function
     def acc_data_handler(self, ctx, data):
