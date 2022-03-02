@@ -17,7 +17,7 @@ import sys
 
 # Start - Match these with MAX78000 application
 SERIAL_BAUD = 115200
-DATA_LEN = 4
+DATA_LEN = 4*6
 # End
 
 SERIAL_TOUT = 5 # Seconds
@@ -28,7 +28,21 @@ def print_result(filename, result):
     print("{0}\t{1}".format(filename, result), end = '')
 
 def send_readings(sport, readings):
+        results = []
         sport.write(struct.pack('ffffff', *readings))
+        print("Sent Data: %s" % (readings))
+        while 1:
+            char = sport.read(1)
+            if char == b'':
+                print("Empty char received")
+                break
+            if char == b'\n':
+                result = "".join(result)
+                print(result)
+                result = []
+                print("-------------------")
+                break
+            result.append(char.decode('utf-8'))
 
 # Sensor Classes and Functions
 class State:
