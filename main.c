@@ -226,7 +226,7 @@ int main(void)
 		printf("\r----------------\n");
 
 		// Adding delay of 1 sec updates the value of RxData
-		MXC_Delay(SEC(1));
+//		MXC_Delay(SEC(1));
 
         // Clears UART receive FIFO after receiving data from host machine
 	    MXC_UART_ClearRXFIFO(MXC_UART_GET_UART(READING_UART));
