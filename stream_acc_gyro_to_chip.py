@@ -74,8 +74,6 @@ class State:
 
         # send readings to MAX78000
         send_readings(self.sport, value_acc_gyro)
-
-        print("--------------------")
         self.samples+= 1
 
 # init uart serial interface
