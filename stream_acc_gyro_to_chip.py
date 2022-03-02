@@ -27,8 +27,8 @@ def print_result(filename, result):
     """ Print formatted result """
     print("{0}\t{1}".format(filename, result), end = '')
 
-def send_readings(sport, readings: list[float]):
-        sport.write(struct.pack('ffffff', readings))
+def send_readings(sport, readings):
+        sport.write(struct.pack('ffffff', *readings))
 
 # Sensor Classes and Functions
 class State:
