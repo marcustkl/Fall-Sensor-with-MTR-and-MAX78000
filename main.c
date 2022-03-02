@@ -223,14 +223,14 @@ int main(void)
 				values[0], values[1], values[2],
 				values[3], values[4], values[5]);
 
-		printf("\r----------------\n");
-
-		// Adding delay of 1 sec updates the value of RxData
-//		MXC_Delay(SEC(1));
+//		printf("\r----------------\n");
 
         // Clears UART receive FIFO after receiving data from host machine
 	    MXC_UART_ClearRXFIFO(MXC_UART_GET_UART(READING_UART));
 	    uart_read_enable_interrupts();
+
+		// Adding delay of 1 sec updates the value of RxData
+		MXC_Delay(SEC(1));
     }
     
 #endif

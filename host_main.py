@@ -47,18 +47,21 @@ def main():
     values = [0.001, 0.002, 0.003, 0.004, 0.005, 0.006]
     # send range of values
     for i in range(0,10):
-        send_float(sport, (num+i for num in values))
+        data = [num+i for num in values]
+        send_float(sport, data)
+        print("Sent Data: %s" % (data))
         while 1:
             char = sport.read(1)
             if char == b'':
                 print("Empty char received")
                 break
-            result.append(char.decode('utf-8'))
             if char == b'\n':
                 result = "".join(result)
                 print(result)
                 result = []
+                print("-------------------")
                 break
+            result.append(char.decode('utf-8'))
             
     # send user input value
     # input_value(sport)
