@@ -100,7 +100,7 @@ address = 'C5:DE:74:B6:AC:5F'
 d = MetaWear(address)
 d.connect()
 print("Connected to " + d.address)
-state = State(d)
+state = State(d, sport)
 
 # configure all metawear
 libmetawear.mbl_mw_settings_set_connection_parameters(state.device.board, 7.5, 7.5, 0, 6000)
