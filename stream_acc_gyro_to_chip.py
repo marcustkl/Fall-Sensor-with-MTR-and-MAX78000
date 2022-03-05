@@ -22,28 +22,6 @@ DATA_LEN = 4*6
 
 SERIAL_TOUT = 5 # Seconds
 
-# Host Functions
-def print_result(filename, result):
-    """ Print formatted result """
-    print("{0}\t{1}".format(filename, result), end = '')
-
-def send_readings(sport, readings):
-        result = []
-        sport.write(struct.pack('ffffff', *readings))
-        print("Sent Data: %s" % (readings))
-        while 1:
-            char = sport.read(1)
-            if char == b'':
-                print("Empty char received")
-                break
-            if char == b'\n':
-                result = "".join(result)
-                print(result)
-                result = []
-                print("-------------------")
-                break
-            result.append(char.decode('utf-8'))
-
 # Sensor Classes and Functions
 class State:
     # init state
@@ -52,29 +30,35 @@ class State:
         self.samples = 0
         self.accCallback = FnVoid_VoidP_DataP(self.acc_data_handler)
         self.gyroCallback = FnVoid_VoidP_DataP(self.gyro_data_handler)
-        self.readings = Queue()
+        self.gyro_reading = []
         self.sport = sport
-
-    # acc callback function
-    def acc_data_handler(self, ctx, data):
-        value = deepcopy(parse_value(data))
-        self.readings.put_nowait([value.x, value.y, value.z])
-        self.samples+= 1
 
     # gyro callback function
     def gyro_data_handler(self, ctx, data):
         value = deepcopy(parse_value(data))
-        acc = self.readings.get_nowait()
-        gyro = [value.x, value.y, value.z]
+        self.gyro_reading = [value.x, value.y, value.z]
+
+    # acc callback function
+    def acc_data_handler(self, ctx, data):
+        value = deepcopy(parse_value(data))
+        gyro = self.gyro_reading
+        acc = [value.x, value.y, value.z]
         # [acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z]
         value_acc_gyro = acc + gyro
         # round to 6 dp
         value_acc_gyro = [round(num, 6) for num in value_acc_gyro]
-        print("ACC: %s GYRO: %s" % (value_acc_gyro[0:3], value_acc_gyro[3:]))
 
         # send readings to MAX78000
-        send_readings(self.sport, value_acc_gyro)
+        print("ACC: %s GYRO: %s" % (value_acc_gyro[0:3], value_acc_gyro[3:]))
+        self.send_readings(self.sport, value_acc_gyro)
         self.samples+= 1
+
+    def send_readings(self, sport, readings):
+        sport.write(struct.pack('ffffff', *readings))
+        print("Sent Data: %s" % (readings))
+        chars = sport.read_until()
+        print(chars.decode("utf-8"))
+        sport.reset_input_buffer()
 
 # init uart serial interface
 
@@ -104,31 +88,31 @@ state = State(d, sport)
 libmetawear.mbl_mw_settings_set_connection_parameters(state.device.board, 7.5, 7.5, 0, 6000)
 sleep(1.5)
 
+# config gyro
+libmetawear.mbl_mw_gyro_bmi160_set_range(state.device.board, GyroBoschRange._1000dps)
+libmetawear.mbl_mw_gyro_bmi160_set_odr(state.device.board, GyroBoschOdr._25Hz)
+libmetawear.mbl_mw_gyro_bmi160_write_config(state.device.board)
+
 # config acc
-libmetawear.mbl_mw_acc_set_odr(state.device.board, 25)
+libmetawear.mbl_mw_acc_set_odr(state.device.board, 1)
 libmetawear.mbl_mw_acc_set_range(state.device.board, 16.0)
 libmetawear.mbl_mw_acc_write_acceleration_config(state.device.board)
-
-# config gyro
-libmetawear.mbl_mw_gyro_bmi160_set_range(state.device.board, GyroBoschRange._1000dps);
-libmetawear.mbl_mw_gyro_bmi160_set_odr(state.device.board, GyroBoschOdr._25Hz);
-libmetawear.mbl_mw_gyro_bmi160_write_config(state.device.board);
-
-# get acc signal and subscribe
-acc = libmetawear.mbl_mw_acc_get_acceleration_data_signal(state.device.board)
-libmetawear.mbl_mw_datasignal_subscribe(acc, None, state.accCallback)
 
 # get gyro signal and subscribe
 gyro = libmetawear.mbl_mw_gyro_bmi160_get_rotation_data_signal(state.device.board)
 libmetawear.mbl_mw_datasignal_subscribe(gyro, None, state.gyroCallback)
 
-# start acc
-libmetawear.mbl_mw_acc_enable_acceleration_sampling(state.device.board)
-libmetawear.mbl_mw_acc_start(state.device.board)
+# get acc signal and subscribe
+acc = libmetawear.mbl_mw_acc_get_acceleration_data_signal(state.device.board)
+libmetawear.mbl_mw_datasignal_subscribe(acc, None, state.accCallback)
 
 # start gyro
 libmetawear.mbl_mw_gyro_bmi160_enable_rotation_sampling(state.device.board)
 libmetawear.mbl_mw_gyro_bmi160_start(state.device.board)
+
+# start acc
+libmetawear.mbl_mw_acc_enable_acceleration_sampling(state.device.board)
+libmetawear.mbl_mw_acc_start(state.device.board)
 
 # sleep until interrupted
 # sleep(10.0)

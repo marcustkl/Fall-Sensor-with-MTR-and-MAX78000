@@ -50,18 +50,8 @@ def main():
         data = [num+i for num in values]
         send_float(sport, data)
         print("Sent Data: %s" % (data))
-        while 1:
-            char = sport.read(1)
-            if char == b'':
-                print("Empty char received")
-                break
-            if char == b'\n':
-                result = "".join(result)
-                print(result)
-                result = []
-                print("-------------------")
-                break
-            result.append(char.decode('utf-8'))
+        chars = sport.read_until()
+        print(chars.decode("utf-8"))
             
     # send user input value
     # input_value(sport)
