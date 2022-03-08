@@ -48,17 +48,20 @@ class State:
         # round to 6 dp
         value_acc_gyro = [round(num, 6) for num in value_acc_gyro]
 
+        # to verify value list
+        # print("ACC: %s GYRO: %s" % (value_acc_gyro[0:3], value_acc_gyro[3:]))
+
         # send readings to MAX78000
-        print("ACC: %s GYRO: %s" % (value_acc_gyro[0:3], value_acc_gyro[3:]))
+        # value_acc_gyro = [acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z]
         self.send_readings(self.sport, value_acc_gyro)
         self.samples+= 1
 
     def send_readings(self, sport, readings):
+        sport.reset_input_buffer()
         sport.write(struct.pack('ffffff', *readings))
         print("Sent Data: %s" % (readings))
         chars = sport.read_until()
         print(chars.decode("utf-8"))
-        sport.reset_input_buffer()
 
 # init uart serial interface
 
