@@ -96,7 +96,7 @@ libmetawear.mbl_mw_gyro_bmi160_set_range(state.device.board, GyroBoschRange._100
 libmetawear.mbl_mw_gyro_bmi160_set_odr(state.device.board, GyroBoschOdr._25Hz)
 libmetawear.mbl_mw_gyro_bmi160_write_config(state.device.board)
 
-# config acc
+# config acc to 1hz, as 1 sec delay is needed on MAX78000 for uart receive
 libmetawear.mbl_mw_acc_set_odr(state.device.board, 1)
 libmetawear.mbl_mw_acc_set_range(state.device.board, 16.0)
 libmetawear.mbl_mw_acc_write_acceleration_config(state.device.board)

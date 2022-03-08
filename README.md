@@ -1,20 +1,25 @@
-# MAX78000 Add 2 Example
+# Sending Acc and Gyor sensor Data from MetaTracker to RPI and then to MAX78000
 
-This project aims to explore the UART connection between a host machine and MAX78000EVKIT. A range of values will be sent from the host machine to the MAX78000EVKIT. Once data is received by the MAX78000EVKIT through the UART, the values of data will be augmented by adding 2 to it and then sent back to the host machine.
+This project aims to send and receive data from a wearable device, a host machine and the MAX78000EVKIT. 
+
+Sensor reading is sent as follows:
+Acceleration and gyro sensor readings from the [MetaTracker](https://mbientlab.com/metatracker/) will be sent to the [MetaHub](https://mbientlab.com/tutorials/MetaHub.html) via Bluetooth.
+Once readings is received on the MetaHub, it is sent via UART to the MAX780000EVKIT.
+Data is received by the MAX78000EVKIT through the UART and the values of data will be verfied by sending it back to the MetaHub. 
 
 ## Preparing the MAX78000EVKIT board
 
-#### Configure MAX78000EVKIT for running Add-2 demo:
+#### Configure MAX78000EVKIT for running project:
 
 * Turn MAX78000EVKIT off by placing SW1 in the OFF position
 
-* Connect host to MAX78000EVKIT CN1 using USB Micro-B cable
+* Connect MetaHub to MAX78000EVKIT CN1 using USB Micro-B cable
 
 * Turn MAX78000EVKIT on by placing SW1 in the ON position
 
 
 ## Preparing the host machine
-The host application communicates with the MAX78000EVKIT using the USB-to-UART bridge, by sending a range of integers from the host machine to the MAX78000EVKIT.
+The MetaHub communicates with the MAX78000EVKIT using the USB-to-UART bridge.
 
 The host application only runs in Linux and is written in Python and uses the following packages:
 
@@ -36,11 +41,11 @@ The host application requires Python 3.7.x or 3.8.x.  Python 2.x and 3.9 are not
 
 * Install python modules: `pip install -r requirements.txt`
 
-* Run project: `python host_main.py --device <device>` where `--device` specifies the serial port associated with the MAX78000EVKIT USB-to-UART bridge
+* Run project: `python stream_acc_gyro_to_chip.py --device <device>` where `--device` specifies the serial port associated with the MAX78000EVKIT USB-to-UART bridge. Default value is `/dev/ttyUSB0` and is dependant on the USB port connected. 
 
 ## Preparing the MetaTracker
 
-Ensure that the MetaTracker still has battery, by running `sudo python led.py`. If the led on the MetaTracker does not light up, replace the battery in the tracker with a new CR2450 coin cell.
+To check that the battery inserted in the MetaTracker has power, run `sudo python led.py`. If the led on the MetaTracker does not light up, replace the battery in the tracker with a new CR2450 coin cell.
 
 MAC Address of MetaTracker: `C5:DE:74:B6:AC:5F`
 
@@ -60,5 +65,3 @@ For Windows:
 ## Running the example
 
 With the MAX78000EVKIT connected, powered on and running the 'Add_2' example, run the host application.
-
-The expected output is shown in the Add_2_Demo.mp4 video
