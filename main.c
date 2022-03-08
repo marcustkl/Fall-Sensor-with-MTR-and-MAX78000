@@ -102,21 +102,10 @@ static void uart_read_enable_interrupts(void)
 int main(void)
 {
     int error, i = 0;
-    uint32_t TxData[DATA_LEN];
+//    uint32_t TxData[DATA_LEN];
     uint32_t RxData[DATA_LEN];
+	float values[6];
     
-//    printf("**************** UART Example ******************\n");
-//    printf("This example receives data from host, adds 2 and sends data back to host.\n");
-//    printf("-->UART Baud \t: %i Hz\n", UART_BAUD);
-//    printf("-->Data Length \t: %i bytes\n", DATA_LEN);
-    
-    // Initialize the data buffers
-    for (i = 0; i < DATA_LEN; i++) {
-        TxData[i] = "a";
-    }
-
-//    memset(RxData, 1, DATA_LEN);
-
 #ifdef DMA
     MXC_DMA_ReleaseChannel(0);
     NVIC_SetVector(DMA0_IRQn, DMA_Handler);
@@ -133,11 +122,11 @@ int main(void)
         while (1) {}
     }
     
-    if((error = MXC_UART_Init(MXC_UART_GET_UART(WRITING_UART), UART_BAUD, MXC_UART_APB_CLK)) != E_NO_ERROR) {
-        printf("-->Error initializing UART: %d\n", error);
-        printf("-->Example Failed\n");
-        while (1) {}
-    }
+//    if((error = MXC_UART_Init(MXC_UART_GET_UART(WRITING_UART), UART_BAUD, MXC_UART_APB_CLK)) != E_NO_ERROR) {
+//        printf("-->Error initializing UART: %d\n", error);
+//        printf("-->Example Failed\n");
+//        while (1) {}
+//    }
 
 //    printf("-->UART Initialized\n\n");
     
@@ -148,17 +137,17 @@ int main(void)
 //    read_req.txLen = 0;
 //    read_req.callback = readCallback;
     
-    mxc_uart_req_t write_req;
-    write_req.uart = MXC_UART_GET_UART(WRITING_UART);
-    write_req.txData = TxData;
-    write_req.txLen = BUFF_SIZE;
-    write_req.rxLen = 0;
-    write_req.callback = NULL;
-    
-    READ_FLAG = 1;
-    DMA_FLAG = 1;
-
-    MXC_UART_ClearRXFIFO(MXC_UART_GET_UART(READING_UART));
+//    mxc_uart_req_t write_req;
+//    write_req.uart = MXC_UART_GET_UART(WRITING_UART);
+//    write_req.txData = TxData;
+//    write_req.txLen = BUFF_SIZE;
+//    write_req.rxLen = 0;
+//    write_req.callback = NULL;
+//
+//    READ_FLAG = 1;
+//    DMA_FLAG = 1;
+//
+//    MXC_UART_ClearRXFIFO(MXC_UART_GET_UART(READING_UART));
     
 #ifdef DMA
     error = MXC_UART_TransactionDMA(&read_req);
@@ -177,11 +166,11 @@ int main(void)
     // Perform blocking UART Write Transaction. returns error code if error occurs
 //    error = MXC_UART_Transaction(&write_req);
     
-    if (error != E_NO_ERROR) {
-        printf("-->Error starting sync write: %d\n", error);
-        printf("-->Example Failed\n");
-        while (1) {}
-    }
+//    if (error != E_NO_ERROR) {
+//        printf("-->Error starting sync write: %d\n", error);
+//        printf("-->Example Failed\n");
+//        while (1) {}
+//    }
     
 #ifdef DMA
     
@@ -199,31 +188,16 @@ int main(void)
 
         // Set interrupt driven UART Receive
         error = MXC_UART_TransactionAsync(&read_req);
-    	while (READ_FLAG){
-			LED_On(LED1);
-			MXC_Delay(500000);
-			LED_Off(LED1);
-			MXC_Delay(500000);
-		}
 
 		if (READ_FLAG != E_NO_ERROR) {
 			printf("-->Error with UART_ReadAsync callback; %d\n", READ_FLAG);
 		}
 
-//		// add 2 to received data
-//		uint32_t value = *(uint32_t *)RxData + 2;
-//
-//		// Prints received value, which is stored in memory location: RxData
-//		printf("\rReceived data: %d. Add 2 to data: %d\n", *RxData, value);
-
-		float values[6];
 		memcpy(&values, &RxData, sizeof(float)*6);
 
 		printf("\rReceived data: %0.6f %0.6f %0.6f %0.6f %0.6f %0.6f\n",
 				values[0], values[1], values[2],
 				values[3], values[4], values[5]);
-
-//		printf("\r----------------\n");
 
         // Clears UART receive FIFO after receiving data from host machine
 	    MXC_UART_ClearRXFIFO(MXC_UART_GET_UART(READING_UART));
